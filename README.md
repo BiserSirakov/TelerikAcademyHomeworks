@@ -1,2 +1,2 @@
-# TelerikAcademyHomeworksasd
-Homeworkss
+# TelerikAcademyHomeworks
+Homeworks
