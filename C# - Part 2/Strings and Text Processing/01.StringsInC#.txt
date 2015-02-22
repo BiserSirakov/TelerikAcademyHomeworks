@@ -1,0 +1,10 @@
+String Class : Represents text as a series of Unicode characters.
+
+Some of the most important methods of the String class are : 
+-Contains
+-IndexOf
+-Join
+-Split
+-Substring
+-ToLower
+-ToUpper	
