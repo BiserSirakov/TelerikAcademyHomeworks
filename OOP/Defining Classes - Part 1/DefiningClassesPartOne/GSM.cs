@@ -118,14 +118,14 @@ namespace DefiningClassesPartOne
         }
 
         // Constructors
-        public GSM() // those are the parameters by default
-            : this("iPhone 5", "Apple", 1200, "Me", new Battery(), new Display(), new List<Call>())
+        public GSM()
+            : this("iPhone 5", "Apple", 1200, "Me", new Battery(), new Display(), new List<Call>()) // those are the parameters by default
         {
 
         }
 
         public GSM(string model, string manifacturer) // Holding only the two mandatory parameters
-            : this("iPhone 5", "Apple", 1200, "Me", new Battery(), new Display(), new List<Call>())
+            : this(model, manifacturer, 1200, "Me", new Battery(), new Display(), new List<Call>())
         {
             this.model = model;
             this.manifacturer = manifacturer;
@@ -150,16 +150,13 @@ namespace DefiningClassesPartOne
         // Methods
         public override string ToString()
         {
-            string result = String.Format("Manifacturer: {0}\n" +
+            return String.Format("Manifacturer: {0}\n" +
                                  "Model: {1}\n" +
                                  "Price: {2}\n" +
                                  "Owner: {3}\n" +
                                  "Battery: {4}\n" +
                                  "Display: {5}\n",
-                                 this.Manifacturer, this.Model, this.Price, this.Owner,
-                                 this.Battery.ToString(), this.Display.ToString());
-
-            return result;
+                                 this.Manifacturer, this.Model, this.Price, this.Owner, this.Battery, this.Display);
         }
 
         public void AddCalls(Call call)

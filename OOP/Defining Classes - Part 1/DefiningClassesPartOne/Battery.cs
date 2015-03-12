@@ -12,6 +12,7 @@ namespace DefiningClassesPartOne
         private string model;
         private double hoursIdle;
         private double hoursTalk;
+
         private BatteryTypes batteryType;
 
         // Properties
@@ -21,7 +22,7 @@ namespace DefiningClassesPartOne
             {
                 return this.model;
             }
-            set
+            private set
             {
                 this.model = value;
             }
@@ -33,7 +34,7 @@ namespace DefiningClassesPartOne
             {
                 return this.hoursIdle;
             }
-            set
+            private set
             {
                 this.hoursIdle = value;
             }
@@ -45,7 +46,7 @@ namespace DefiningClassesPartOne
             {
                 return this.hoursTalk;
             }
-            set
+            private set
             {
                 this.hoursTalk = value;
             }

@@ -10,7 +10,9 @@ namespace DefiningClassesPartOne
     {
         static void Main()
         {
-            //GSMTest.PrintList(GSMTest.listOfGSMs); // Problem 7. GSM test
+            GSMTest.PrintList(GSMTest.listOfGSMs); // Problem 7. GSM test
+
+            Console.WriteLine(new string('-', 50));
 
             GSMCallHistoryTest.CreateCalltestHistory(); // Problem 12. Call history test
             GSMCallHistoryTest.DisplayCalltestHistory(); 
