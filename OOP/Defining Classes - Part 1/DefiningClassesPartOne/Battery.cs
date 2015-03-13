@@ -3,7 +3,7 @@
     using System;
     using System.Linq;
 
-    class Battery
+    public class Battery
     {
         // Fields
         private string model;
@@ -15,9 +15,7 @@
         // Constructors
         public Battery()
         {
-
         }
-
         public Battery(string model)
         {
             this.model = model;
@@ -38,6 +36,7 @@
             {
                 return this.model;
             }
+
             private set
             {
                 this.model = value;
@@ -50,6 +49,7 @@
             {
                 return this.hoursIdle;
             }
+
             private set
             {
                 this.hoursIdle = value;
@@ -62,6 +62,7 @@
             {
                 return this.hoursTalk;
             }
+
             private set
             {
                 this.hoursTalk = value;
@@ -74,7 +75,8 @@
             {
                 return this.batteryType;
             }
-            set
+
+            private set
             {
                 this.batteryType = value;
             }
@@ -84,7 +86,7 @@
 
         public override string ToString()
         {
-            return string.Format("Model : {0}, Hours idle : {1}, Hours talk : {2}, Type : {3}",
+            return string.Format("Model : {0}, Hours idle : {1}, Hours talk : {2}, Type : {3}", 
                 this.Model, this.HoursIdle, this.HoursTalk, this.BatteryType);
         }
     }

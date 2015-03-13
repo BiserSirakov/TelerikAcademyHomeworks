@@ -3,7 +3,7 @@
     using System;
     using System.Linq;
 
-    class GSMCallHistoryTest
+    public class GSMCallHistoryTest
     {
         public static GSM gsm = new GSM();
 

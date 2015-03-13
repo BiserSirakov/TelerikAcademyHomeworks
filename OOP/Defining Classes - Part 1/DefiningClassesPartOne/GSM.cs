@@ -4,7 +4,7 @@
     using System.Collections.Generic;
     using System.Linq;
 
-    class GSM
+    public class GSM
     {
         // Fields
         private string model;
@@ -43,7 +43,7 @@
             this.callHistory = callHistory;
         }
 
-        static GSM()
+        public static GSM()
         {
             IPhone4S = new GSM("iPhone4s", "Apple", 800, "Ivan", new Battery(), new Display(), new List<Call>());
         }

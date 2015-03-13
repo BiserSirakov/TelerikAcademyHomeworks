@@ -3,7 +3,7 @@
     using System;
     using System.Linq;
 
-    class Call
+    public class Call
     {
         // Fields 
         private DateTime dateAndTime;

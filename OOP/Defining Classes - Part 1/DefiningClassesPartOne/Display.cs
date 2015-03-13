@@ -3,7 +3,7 @@
     using System;
     using System.Linq;
 
-    class Display
+    public class Display
     {
         // Fields
         private double size;

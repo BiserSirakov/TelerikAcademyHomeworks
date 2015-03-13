@@ -4,7 +4,7 @@
     using System.Collections.Generic;
     using System.Linq;
 
-    class GSMTest
+    public class GSMTest
     {
         public static List<GSM> listOfGSMs = new List<GSM> {
         new GSM("iPhone5", "Apple", 1200, "Me", new Battery("bestBatteryModel", 200, 100, BatteryTypes.NiCd), new Display(10, 12000), new List<Call>()),
