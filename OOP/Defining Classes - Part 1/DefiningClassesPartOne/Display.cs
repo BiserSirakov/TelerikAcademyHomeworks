@@ -1,16 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DefiningClassesPartOne
+﻿namespace DefiningClassesPartOne
 {
+    using System;
+    using System.Linq;
+
     class Display
     {
         // Fields
         private double size;
         private int numberOfColors;
+
+        // Constructors
+        public Display()
+        {
+
+        }
+
+        public Display(double size)
+        {
+            this.size = size;
+        }
+
+        public Display(double size, int numberOfColors)
+        {
+            this.size = size;
+            this.numberOfColors = numberOfColors;
+        }
 
         // Properties
         public double Size
@@ -35,23 +49,6 @@ namespace DefiningClassesPartOne
             {
                 this.numberOfColors = value;
             }
-        }
-
-        // Constructors
-        public Display()
-        {
-
-        }
-
-        public Display(double size)
-        {
-            this.size = size;
-        }
-
-        public Display(double size, int numberOfColors)
-        {
-            this.size = size;
-            this.numberOfColors = numberOfColors;
         }
 
         // Methods

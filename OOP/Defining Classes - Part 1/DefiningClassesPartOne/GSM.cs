@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DefiningClassesPartOne
+﻿namespace DefiningClassesPartOne
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+
     class GSM
     {
         // Fields
@@ -19,6 +17,36 @@ namespace DefiningClassesPartOne
         private static GSM iPhone4S;
 
         private List<Call> callHistory;
+
+        // Constructors
+        public GSM()
+            : this("iPhone 5", "Apple", 1200, "Me", new Battery(), new Display(), new List<Call>()) // those are the parameters by default
+        {
+
+        }
+
+        public GSM(string model, string manifacturer) // Holding only the two mandatory parameters
+            : this(model, manifacturer, 1200, "Me", new Battery(), new Display(), new List<Call>())
+        {
+            this.model = model;
+            this.manifacturer = manifacturer;
+        }
+
+        public GSM(string model, string manifacturer, decimal price, string owner, Battery battery, Display display, List<Call> callHistory) // Holding all parameters
+        {
+            this.manifacturer = manifacturer;
+            this.model = model;
+            this.price = price;
+            this.owner = owner;
+            this.battery = battery;
+            this.display = display;
+            this.callHistory = callHistory;
+        }
+
+        static GSM()
+        {
+            IPhone4S = new GSM("iPhone4s", "Apple", 800, "Ivan", new Battery(), new Display(), new List<Call>());
+        }
 
         // Properties
         public string Model
@@ -115,36 +143,6 @@ namespace DefiningClassesPartOne
             {
                 this.callHistory = value;
             }
-        }
-
-        // Constructors
-        public GSM()
-            : this("iPhone 5", "Apple", 1200, "Me", new Battery(), new Display(), new List<Call>()) // those are the parameters by default
-        {
-
-        }
-
-        public GSM(string model, string manifacturer) // Holding only the two mandatory parameters
-            : this(model, manifacturer, 1200, "Me", new Battery(), new Display(), new List<Call>())
-        {
-            this.model = model;
-            this.manifacturer = manifacturer;
-        }
-
-        public GSM(string model, string manifacturer, decimal price, string owner, Battery battery, Display display, List<Call> callHistory) // Holding all parameters
-        {
-            this.manifacturer = manifacturer;
-            this.model = model;
-            this.price = price;
-            this.owner = owner;
-            this.battery = battery;
-            this.display = display;
-            this.callHistory = callHistory;
-        }
-
-        static GSM()
-        {
-            IPhone4S = new GSM("iPhone4s", "Apple", 800, "Ivan", new Battery(), new Display(), new List<Call>());
         }
 
         // Methods

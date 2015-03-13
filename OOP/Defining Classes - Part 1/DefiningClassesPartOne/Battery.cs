@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DefiningClassesPartOne
+﻿namespace DefiningClassesPartOne
 {
+    using System;
+    using System.Linq;
+
     class Battery
     {
         // Fields
@@ -14,6 +11,25 @@ namespace DefiningClassesPartOne
         private double hoursTalk;
 
         private BatteryTypes batteryType;
+
+        // Constructors
+        public Battery()
+        {
+
+        }
+
+        public Battery(string model)
+        {
+            this.model = model;
+        }
+
+        public Battery(string model, double hoursIdle, double hoursTalk, BatteryTypes batteryType)
+        {
+            this.model = model;
+            this.hoursIdle = hoursIdle;
+            this.hoursTalk = hoursTalk;
+            this.batteryType = batteryType;
+        }
 
         // Properties
         public string Model
@@ -62,25 +78,6 @@ namespace DefiningClassesPartOne
             {
                 this.batteryType = value;
             }
-        }
-
-        // Constructors
-        public Battery()
-        {
-
-        }
-
-        public Battery(string model)
-        {
-            this.model = model;
-        }
-
-        public Battery(string model, double hoursIdle, double hoursTalk, BatteryTypes batteryType)
-        {
-            this.model = model;
-            this.hoursIdle = hoursIdle;
-            this.hoursTalk = hoursTalk;
-            this.batteryType = batteryType;
         }
 
         // Methods

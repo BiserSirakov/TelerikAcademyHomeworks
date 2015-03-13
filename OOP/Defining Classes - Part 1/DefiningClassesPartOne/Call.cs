@@ -1,17 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DefiningClassesPartOne
+﻿namespace DefiningClassesPartOne
 {
+    using System;
+    using System.Linq;
+
     class Call
     {
         // Fields 
         private DateTime dateAndTime;
         private string dialedPhone;
         private int duration;
+
+        // Constructor
+        public Call(DateTime dateAndTime, string dialedPhone, int duration)
+        {
+            this.DateAndTime = dateAndTime;
+            this.DialedPhone = dialedPhone;
+            this.Duration = duration;
+        }
 
         // Properties
         public DateTime DateAndTime
@@ -48,14 +53,6 @@ namespace DefiningClassesPartOne
             {
                 this.dialedPhone = value;
             }
-        }
-
-        // Constructor
-        public Call(DateTime dateAndTime, string dialedPhone, int duration)
-        {
-            this.DateAndTime = dateAndTime;
-            this.DialedPhone = dialedPhone;
-            this.Duration = duration;
         }
 
         // Method

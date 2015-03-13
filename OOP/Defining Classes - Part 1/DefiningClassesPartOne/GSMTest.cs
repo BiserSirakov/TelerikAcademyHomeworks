@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DefiningClassesPartOne
+﻿namespace DefiningClassesPartOne
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+
     class GSMTest
     {
         public static List<GSM> listOfGSMs = new List<GSM> {
