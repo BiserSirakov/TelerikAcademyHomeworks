@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2E4BF76B-DDFB-40B2-B7B7-E30E23CB120E}</ProjectGuid>
+    <ProjectGuid>{F6FBB738-EA30-455C-88F1-57FD94AFFE98}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Defining_Classes___Part_2</RootNamespace>
-    <AssemblyName>Defining Classes - Part 2</AssemblyName>
+    <RootNamespace>VersionAttribute</RootNamespace>
+    <AssemblyName>VersionAttribute</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -41,7 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="VersionAttribute.cs" />
+    <Compile Include="MainClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
