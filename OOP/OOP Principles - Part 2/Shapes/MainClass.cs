@@ -12,7 +12,16 @@ namespace Shapes
     {
         static void Main()
         {
+            Shape[] shapes = new Shape[]
+            {
+                new Rectangle(3.5, 3),
+                new Square(5),
+                new Triangle(4.5, 6)
+            };
 
+            Console.WriteLine("Surface of the rectangle : " + shapes[0].CalculateSurface());
+            Console.WriteLine("Surface of the square : " + shapes[1].CalculateSurface());
+            Console.WriteLine("Surface of the triangle : " + shapes[2].CalculateSurface());
         }
     }
 }
