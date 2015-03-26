@@ -16,11 +16,6 @@
             this.InterestRate = interest;
         }
 
-        public void Deposit(decimal amount)
-        {
-            this.Balance += amount;
-        }
-
         public Customer Customer
         {
             get
@@ -44,7 +39,7 @@
             {
                 return this.balance;
             }
-            private set
+            protected set
             {
                 if (value < 0)
                 {
@@ -72,7 +67,12 @@
             }
         }
 
-        public virtual decimal CalculateInterest(int months)
+        public void Deposit(decimal amount)
+        {
+            this.Balance += amount;
+        }
+
+        public virtual decimal CalculateInterest(decimal months)
         {
             return 0;
         }

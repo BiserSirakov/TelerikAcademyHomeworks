@@ -12,12 +12,26 @@
 namespace BankAccounts
 {
     using System;
+    using BankAccounts.Accounts;
+    using BankAccounts.Customers;
 
     class MainClass
     {
         static void Main()
         {
+            Bank bank = new Bank();
 
+            DepositAccount depositAcc = new DepositAccount(new Individual("Gosho"), 10500.4M, 1.5M);
+            LoanAccount loanAcc = new LoanAccount(new Company("Company Inc."), 200000, 3);
+            MortgageAccount mortgageAcc = new MortgageAccount(new Individual("Pesho"), 5000.850M, 6);
+
+            bank.AddAccount(depositAcc);
+            bank.AddAccount(loanAcc);
+            bank.AddAccount(mortgageAcc);
+
+            bank.RemoveAccount(depositAcc);
+
+            Console.WriteLine(bank);
         }
     }
 }

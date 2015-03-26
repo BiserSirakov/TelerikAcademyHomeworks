@@ -12,24 +12,29 @@
 
         }
 
-        public override decimal CalculateInterest(int months)
+        public override decimal CalculateInterest(decimal months)
         {
             if (this.Customer is Individual)
             {
-                if (months >= 3)
+                if (months < 3)
                 {
-                    months = -3;
+                    months = 0;
                 }
             }
-            else
+            else if (this.Customer is Company)
             {
-                if (months >= 2)
+                if (months < 2)
                 {
-                    months -= 2;
+                    months = 0;
                 }
             }
 
             return months * (this.InterestRate / 100) * this.Balance;
+        }
+
+        public override string ToString()
+        {
+            return string.Format("Loan Account : {0}, Balance : {1}", this.Customer.Name, this.Balance);
         }
     }
 }
