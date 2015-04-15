@@ -1,0 +1,23 @@
+table {
+	background-color: #6E6E6E;
+}
+
+th {
+	font-weight: normal;
+	text-align: left;
+	color: #A4A4A4;
+}
+
+.yellow {
+	color: #F3E2A9;
+}
+
+.red {
+	font-weight: bold;
+	color: #FF0000;
+}
+
+.left-col {
+	color: #FFFFFF;
+	font-style: italic;
+}

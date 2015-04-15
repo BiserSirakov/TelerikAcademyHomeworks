@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration form</title>
+	<meta charset="utf-8">
+	<style>
+		table {
+			border-collapse: collapse;
+			text-align: center;
+		}
+		tfoot {
+			background-color: lightblue;
+		}
+	</style>
+</head>
+<body>
+<form>
+	<table border="1" cellpadding="2">
+		<colgroup>
+			<col style="width:150px" />
+		</colgroup>
+		<tfoot>
+			<tr>
+			 	<td colspan="2">
+			 		<input type="submit" value="submit" /> 
+			 		<input type="reset" value="Clean this form" />
+			 	</td>
+			 </tr>
+		</tfoot>
+		<tbody>
+			 <tr>
+			 	<td><strong>Last Name</strong></td>
+			 	<td><input type="text" size="50" /></td>
+			 </tr>
+			 <tr>
+			 	<td><strong>First Name</strong></td>
+			 	<td><input type="text" size="50" /></td>
+			 </tr>
+			 <tr>
+			 	<td><strong>Address</strong></td>
+			 	<td><textarea rows="3" cols="44"></textarea></td>
+			 </tr>
+			 <tr>
+			 	<td><strong>City</strong></td>
+			 	<td><input type="text" size="33" /> State <input type="text" size="5" /></td>
+			 </tr>
+			 <tr>
+			 	<td><strong>Zip/Postal Code</strong></td>
+			 	<td><input type="text" size="50" /></td>
+			 </tr>
+			 <tr>
+			 	<td><strong>Country</strong></td>
+			 	<td>
+			 		<select>
+  						<option value="Value 1" selected="selected">Bulgaria</option>
+  						<option value="Value 2">Greece</option>
+  						<option value="Value 3">Romania</option>
+					</select>
+			 	</td>
+			 </tr>
+			 <tr>
+			 	<td><strong>Phone(country code, area code, number</strong></td>
+			 	<td>(+<input type="tel" size="5" />) <input type="tel" size="5" /> <input type="tel" size="15" /></td>
+			 </tr> 
+			 <tr>
+			 	<td><strong>E-mail</strong></td>
+			 	<td><input type="email" size="50" /></td>
+			 </tr>
+			 <tr>
+			 	<td><strong>Birth date</strong></td>
+			 	<td><input type="date" size="50" value="дд.мм.гггг г." /></td>
+			 </tr>
+			 <tr>
+			 	<td><strong>Gender</strong></td>
+			 	<td>
+			 		<select>
+  						<option value="Value 1" selected="selected">Male</option>
+  						<option value="Value 2">Female</option>
+					</select>
+			 	</td>
+			 </tr>
+			 <tr>
+			 	<td><strong>Starting date</strong></td>
+			 	<td>
+			 		<input type="radio" name="startingdate" value="spring2015" /> Spring 2015 
+			 		<input type="radio" name="startingdate" value="summer2015" /> Summer 2015
+			 	</td>
+			 </tr>
+			 <tr>
+			 	<td><strong>Comments/Questions</strong></td>
+			 	<td>
+			 		<textarea rows="3" cols="44"></textarea>
+			 	</td>
+			 </tr>
+		</tbody>
+	</table>
+</form>
+</body>
+</html>
