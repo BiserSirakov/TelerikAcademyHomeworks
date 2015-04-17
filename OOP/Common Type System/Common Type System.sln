@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentClass", "StudentClas
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonClass", "PersonClass\PersonClass.csproj", "{F4634FC5-7013-4A82-B853-43B42DB54606}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitArray", "BitArray\BitArray.csproj", "{B6C53B60-7005-46BF-BD78-C684CF3B7116}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{F4634FC5-7013-4A82-B853-43B42DB54606}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4634FC5-7013-4A82-B853-43B42DB54606}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4634FC5-7013-4A82-B853-43B42DB54606}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6C53B60-7005-46BF-BD78-C684CF3B7116}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6C53B60-7005-46BF-BD78-C684CF3B7116}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6C53B60-7005-46BF-BD78-C684CF3B7116}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6C53B60-7005-46BF-BD78-C684CF3B7116}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

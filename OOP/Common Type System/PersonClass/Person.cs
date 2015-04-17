@@ -6,7 +6,7 @@
     {
         private string name;
         private int? age;
-
+        
         public Person(string name, int age)
         {
             this.Name = name;
@@ -19,14 +19,20 @@
             this.Age = null;
         }
         
+        
         public string Name
         {
             get
             {
                 return this.name;
             }
-            set
+            private set
             {
+                if (string.IsNullOrEmpty(value))
+                {
+                    throw new ArgumentNullException();
+                }
+
                 this.name = value;
             }
         }
@@ -37,7 +43,7 @@
             {
                 return this.age;
             }
-            set
+            private set
             {
                 this.age = value;
             }
