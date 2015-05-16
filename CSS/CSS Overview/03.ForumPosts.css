@@ -1,0 +1,44 @@
+body {
+	background-color: #A9A9A9;
+}
+
+h1 {
+	color: #FAFAD2;
+	text-align: center;
+	font-size: 50px;
+}
+
+article h1 {
+	text-align: left;
+	font-size: 30px;
+}
+
+nav ul li {
+	text-align: center;
+	list-style: none;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: #FFFFFF;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+nav ul li:last-child {
+	text-decoration: underline;
+}
+
+.current {
+	background-color: #D3D3D3;
+}
+
+footer {
+	text-align: center;
+	font-size: 18px;
+}
+
+footer p {
+	font-size: 14px;
+	text-align: left;
+}

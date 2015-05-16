@@ -1,0 +1,57 @@
+#wrapper {
+	border: 1px solid #8D7053;
+	border-radius: 10px;
+	background-color: #3B3B3B;
+	width: 650px;
+	color: #828282;
+	font-family: Calibri;
+	font-size: 15px;
+	line-height: 20px;
+	word-spacing: 3px;
+}
+
+#wrapper > header {
+	margin: 10px;
+	height: 60px;
+}
+
+header img {
+	float: left;
+}
+
+header label {
+	color: #fff;
+	font-size: 1.5em;
+	margin-left: 10px;
+	margin-top: 20px;
+}
+
+header input {
+	margin: 5px;
+}
+
+header button {
+	height: 28px;
+	width: 56px;
+	background-image: url("go.png");
+	border: none;
+	float: right;
+}
+
+section {
+	margin: 10px;
+}
+
+section p {
+	margin-right: 50px;
+}
+
+h1 {
+	color: #C7AD23;
+	font-weight: normal;
+	font-size: 32px;
+}
+
+.white {
+	color: #fff;
+}

@@ -1,0 +1,25 @@
+table {
+	border-collapse: collapse;
+	font-family: verdana;
+}
+
+table th {
+	background-color: #59BD06;
+	color: #FFFFFF;
+	font-weight: normal;
+	text-align: left;
+	padding: 5px 40px 5px 10px;
+}
+
+table td {
+	padding: 5px 40px 5px 10px;
+}
+
+#de, #mexico, #uk {
+	height: 15px;
+	width: 25px;
+}
+
+.beige {
+	background-color: #ECECD8;
+}

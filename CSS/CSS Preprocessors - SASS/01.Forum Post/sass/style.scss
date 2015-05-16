@@ -1,0 +1,188 @@
+$gradient: -webkit-linear-gradient(#D691FF, #9215F2);
+$bg-color: #9215F2;
+
+@mixin reset {
+	margin: 0;
+	padding: 0;
+}
+
+@mixin clearfix {
+	zoom: 1;
+	
+	&:after {
+		display: block;
+		content: "";
+		height: 0;
+		clear: both;
+	}
+}
+
+body {
+	@include reset;
+	background-color: $bg-color;
+	
+	#header-container {
+		background: $gradient;
+		
+		#logo-container {
+			
+			h1 {
+				@include reset;
+			}
+			
+			float: left;
+			margin: 20px;
+		}
+		
+		#reg-form-container {
+			float: right;
+			margin: 20px;
+			margin-right: 50px;
+			
+			label, input {
+				color: white;
+			}
+			
+			input {
+				border: 1px solid black;
+				border-radius: 10px;
+				background-color: #B35EF3;
+				margin: 10px;
+				
+				&[type="password"] {
+					margin-left: 13px;
+				}
+			}
+			
+			button {
+				border: 1px outset;
+				background-color: #B35FF2;
+				border-radius: 10px;
+				color: white;
+				padding: 5px;
+				width: 80px;
+			}
+		}
+		
+		@include clearfix;
+	}
+	
+	nav {
+		border: 2px solid black;
+		border-radius: 10px;
+		width: 65%;
+		margin-left: 20px;
+		
+		& > ul {
+			@include reset;
+			position: relative;
+			
+			& > li {
+				display: inline-block;
+				width: auto;
+				margin: 10px auto;
+				margin-left: 20px;
+				
+				a {
+					color: white;
+					text-decoration: none;
+				}
+				
+				.sub-nav-list {
+					list-style: none;
+					display: none;
+					
+					li {
+						margin: 10px;
+						padding: 5px;
+						border-bottom: 2px solid black;
+						
+						&:hover {
+							text-decoration: underline;
+						}
+						
+						&:last-of-type {
+							border: none;
+						}
+					}
+				}
+				
+				&:hover {
+					text-decoration: underline;
+					
+					.sub-nav-list {
+						position: absolute;
+						display: block;
+						left: 10px;
+					}
+				}
+			}
+		}
+		
+		ul#sub-nav-list {
+			display: none;
+		}
+	}
+	
+	section {
+		
+		float: left;
+		width: 70%;
+		
+		article {
+			border: 2px solid black;
+			border-radius: 10px;
+			margin: 20px;
+			padding: 15px;
+			width: 90%;
+			color: white;
+			
+			footer {
+				text-align: right;
+				
+				a {
+					color: grey;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+	
+	aside {
+		float: right;
+		width: 30%;
+		color: white;
+		height: 780px;
+		
+		& > ul {
+			padding: 0;
+			margin-right: 60px;
+		}
+		
+		& > ul > li {
+			border: 2px solid black;
+			border-radius: 10px;
+			margin: 20px;
+			padding: 20px;
+			list-style: none;
+			
+			ul {
+				list-style: none;
+				list-style-image: url("images\li-dot.png");
+			}
+		}
+		
+		a {
+			color: gray;
+			text-decoration: none;
+		}
+		
+		@include clearfix;
+	}
+	
+	& > footer {
+		text-align: center;
+		color: white;
+		
+	}
+}
