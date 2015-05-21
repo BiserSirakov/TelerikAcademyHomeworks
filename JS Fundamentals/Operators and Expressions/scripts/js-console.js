@@ -18,12 +18,12 @@
 			textLine.innerHTML = text;
 			textArea.appendChild(textLine);
 			consoleElement.scrollTop = consoleElement.scrollHeight;
-		}
+		};
 
 		self.writeLine = function jsConsoleWriteLine(text) {
 			self.write(text);
 			textArea.appendChild(document.createElement("br"));
-		}
+		};
 
 		self.read = function readText(inputSelector) {
 			var element = document.querySelector(inputSelector);
@@ -33,17 +33,17 @@
 			else {
 				return element.value;
 			}
-		}
+		};
 
 		self.readInteger = function readInteger(inputSelector) {
 			var text = self.read(inputSelector);
 			return parseInt(text);
-		}
+		};
 
 		self.readFloat = function readFloat(inputSelector) {
 			var text = self.read(inputSelector);
 			return parseFloat(text);
-		}
+		};
 
 		return self;
 	}
