@@ -2,7 +2,7 @@
 //Write a script that prints all the numbers from 1 to N.
 
 function FromOneToN() {
-    var input = document.getElementById('input1').value * 1;
+    var input = document.getElementById('input1').value;
 
     for (var i = 1; i <= input; i++) {
         jsConsole.write(i + " ");
@@ -16,7 +16,7 @@ function FromOneToN2() {
     var input = document.getElementById('input2').value * 1;
 
     for (var i = 1; i <= input; i++) {
-        if (i % 3 != 0 && i % 7 != 0) {
+        if (i % 3 !== 0 && i % 7 !== 0) {
             jsConsole.write(i + " ");
         }
     }
@@ -51,7 +51,6 @@ function MinAndMax() {
 function problem4() {
     var smallest = 'zzz',
         largest = '',
-        result,
         prop;
 
     for (prop in document) {
