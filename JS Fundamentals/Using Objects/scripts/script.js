@@ -111,13 +111,60 @@ Array.prototype.remove = function (value) {
 };
 
 function problem2() {
+    var arr = document.getElementById('input2arr').value.split(', '),
+        element = document.getElementById('input2elem').value;
 
+    document.getElementById('result2').innerHTML = arr.remove(element);
 }
 
 //Problem 3. Deep copy
 //Write a function that makes a deep copy of an object.
 //The function should work for both primitive and reference types.
 
+function problem3() {
+    var obj = {
+            stringProperty: 'this is a string',
+            numberProperty: 5,
+            arrayProperty: [1, 2, 3, 4, 5],
+            objectProperty: {
+                a: 5,
+                b: 7,
+                c: [1, 2, 3]
+            }
+        },
+        copy = createDeepCopy(obj),
+        result = '',
+        prop;
+
+    result += 'Properties of the copy:<br /><br />';
+
+    for (prop in copy) {
+        result += (prop + ': ' + copy[prop] + '<br />');
+        console.log(prop + ': ' + copy[prop]);
+    }
+
+    result += '<br />Change a reference type property of the original object:<br />';
+
+    obj.arrayProperty[0] = 'This is changed';
+
+    result += 'Object.arrayProperty: ' + obj.arrayProperty + '<br />The copy is not changed:<br />copy.arrayProperty: ' + copy.arrayProperty;
+
+    document.getElementById('result3').innerHTML = result;
+}
+
+function createDeepCopy(obj) {
+    if (obj === null || typeof(obj) !== 'object') {
+        return obj;
+    }
+
+    var copy = obj.constructor();
+
+    for (var prop in obj) {
+        copy[prop] = createDeepCopy(obj[prop]);
+    }
+
+    return copy;
+}
 
 //Problem 4. Has property
 //Write a function that checks if a given object contains a given property.
@@ -125,6 +172,28 @@ function problem2() {
 //var obj  = …;
 //var hasProp = hasProperty(obj, 'length');
 
+function problem4() {
+    var obj = {
+        stringProperty: 'this is a string',
+        numberProperty: 5,
+        arrayProperty: [1, 2, 3, 4, 5],
+        objectProperty: {
+            a: 5,
+            b: 7,
+            c: [1, 2, 3]
+        }
+    };
+
+    hasProperty(obj, 'arrayProperty');
+}
+
+function hasProperty(obj, prop) {
+    if (prop in obj) {
+        document.getElementById('result4').innerHTML = 'The object contains the property ' + prop + ' with value: ' + obj[prop];
+    } else {
+        document.getElementById('result4').innerHTML = 'The object does not contain the property ' + prop;
+    }
+}
 
 //Problem 5. Youngest person
 //Write a function that finds the youngest person in a given array of people and prints his/hers full name
@@ -136,6 +205,32 @@ function problem2() {
 //    { firstname : 'Gosho', lastname: 'Petrov', age: 32 },
 //    { firstname : 'Bay', lastname: 'Ivan', age: 81},… ];
 
+function problem5() {
+    var gosho = createPerson('Gosho', 'Petrov', 32),
+        ivan = createPerson('Bay', 'Ivan', 81),
+        pesho = createPerson('Pesho', 'Georgiev', 44),
+        joro = createPerson('Zaeka', 'Joro', 5),
+        people = [ivan, joro, pesho, gosho],
+        len,
+        i,
+        youngest = people[0];
+
+    for (i = 1, len = people.length; i < len; i += 1) {
+        if (people[i].age <= youngest.age) {
+            youngest = people[i];
+        }
+    }
+
+    document.getElementById('result5').innerHTML = 'The youngest guy is ' + youngest.firstname + ' ' + youngest.lastname;
+}
+
+function createPerson(fname, lname, age) {
+    return {
+        firstname: fname,
+        lastname: lname,
+        age: age
+    };
+}
 
 //Problem 6.
 //Write a function that groups an array of people by age, first or last name.
@@ -148,3 +243,103 @@ function problem2() {
 //var groupedByFname = group(people, 'firstname');
 //var groupedByAge= group(people, 'age');
 
+function problem6() {
+    var gosho = createPerson('Gosho', 'Petrov', 32),
+        ivan = createPerson('Bay', 'Ivan', 81),
+        pesho = createPerson('Pesho', 'Georgiev', 44),
+        joro = createPerson('Zaeka', 'Joro', 5),
+        people = [ivan, joro, pesho, gosho],
+        groupedByFirstName = group(people, 'firstname'),
+        groupedByLastName = group(people, 'lastname'),
+        groupedByAge = group(people, 'age'),
+        resultConsole = '',
+        resultHTML = '',
+        prop;
+
+    resultConsole += '\nGrouped by first name:\n\n';
+    resultHTML += '<br />Grouped by first name:<br /><br />';
+    for (prop in groupedByFirstName) {
+        resultConsole += (prop + ': ' + printArrayOfObjects(groupedByFirstName[prop], 'console'));
+        resultHTML += (prop + ': ' + printArrayOfObjects(groupedByFirstName[prop], 'html'));
+    }
+    resultConsole += '\nGrouped by last name:\n\n';
+    resultHTML += '<br />Grouped by last name:<br /><br />';
+    for (prop in groupedByLastName) {
+        resultConsole += (prop + ': ' + printArrayOfObjects(groupedByLastName[prop], 'console'));
+        resultHTML += (prop + ': ' + printArrayOfObjects(groupedByLastName[prop], 'HTML'));
+    }
+    resultConsole += '\nGrouped by age:\n\n';
+    resultHTML += '<br />Grouped by age:<br /><br />';
+    for (prop in groupedByAge) {
+        resultConsole += (prop + ': ' + printArrayOfObjects(groupedByAge[prop], 'console'));
+        resultHTML += (prop + ': ' + printArrayOfObjects(groupedByAge[prop], 'HTML'));
+    }
+
+    document.getElementById('result6').innerHTML = resultHTML;
+}
+
+function group(array, property) {
+    var i,
+        len = array.length,
+        prop,
+        result = {};
+
+    if (property === 'firstname') {
+        for (i = 0; i < len; i += 1) {
+            if (result[array[i].firstname]) {
+                result[array[i].firstname].push(array[i]);
+            } else {
+                result[array[i].firstname] = [array[i]];
+            }
+        }
+        return result;
+    }
+
+    if (property === 'lastname') {
+        for (i = 0; i < len; i += 1) {
+            if (result[array[i].lastname]) {
+                result[array[i].lastname].push(array[i]);
+            } else {
+                result[array[i].lastname] = [array[i]];
+            }
+        }
+        return result;
+    }
+
+    if (property === 'age') {
+        for (i = 0; i < len; i += 1) {
+            if (result[array[i].age]) {
+                result[array[i].age].push(array[i]);
+            } else {
+                result[array[i].age] = [array[i]];
+            }
+        }
+        return result;
+    }
+}
+
+function printArrayOfObjects(array, type) {
+    var result = '',
+        prop,
+        len = array.length;
+
+    for (i = 0; i < len; i += 1) {
+        for (prop in array[i]) {
+            result += (prop + ': ' +
+            array[i][prop] + '; ');
+        }
+        if (type === 'console') {
+            result += '\n';
+            if (i < len - 1) {
+                result += '\t';
+            }
+        } else {
+            result += '<br />';
+            if (i < len - 1) {
+                result += '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
+            }
+        }
+
+    }
+    return result;
+}

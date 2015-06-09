@@ -28,11 +28,3 @@ body .js-console > p > br {
   display: inline-block;
   margin-bottom: 5px;
 }
-
-#inputs1 input {
-    width: 40px;
-}
-
-#input2arr {
-    width: 200px;
-}

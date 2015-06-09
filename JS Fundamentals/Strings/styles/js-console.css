@@ -5,7 +5,7 @@ body .js-console {
   margin: 0;
   padding: 5px 10px;
   background-color: black;
-  width: 1000px;
+  width: 1100px;
   height: 500px;
   font-family: Consolas;
   font-size: 18px;
@@ -27,12 +27,4 @@ body .js-console > p > span {
 body .js-console > p > br {
   display: inline-block;
   margin-bottom: 5px;
-}
-
-#inputs1 input {
-    width: 40px;
-}
-
-#input2arr {
-    width: 200px;
 }
